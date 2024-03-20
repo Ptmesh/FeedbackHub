@@ -1,0 +1,25 @@
+<%- include('partials/header.ejs'); %>
+
+<section class="p-5">
+  <div class="container-fluid p-5">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-md">
+        <h1 class="mb-3">Please Login Or Register to Continue</h1>
+        <p class="lead mt-3">
+          This will help us authenticate and protect user's identity , data and
+          create an secure enviornment within our software!
+          <span class="text-warning"
+            >We won't share your data with anyone!</span
+          >
+        </p>
+        <a href="/register" class="btn btn-primary mt-3">Register</a>
+        <a href="/logIn" class="btn btn-primary mt-3">Login</a>
+      </div>
+      <div class="col-md">
+        <img src="/public/img/secure.png" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer.ejs') %>

@@ -1,0 +1,11 @@
+<%- include('partials/header.ejs') %>
+
+<section class="p-5">
+  <div class="container">
+    <% review.forEach(rev => { %>
+    <h5 class="card-title"><%= rev.username %></h5>
+    <p class="card-text"><%= rev.feedback %></p>
+    <% }); %>
+  </div>
+</section>
+<%- include('partials/footer.ejs') %>
