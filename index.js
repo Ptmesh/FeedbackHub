@@ -10,7 +10,7 @@ const db = new pg.Client({
   user: "postgres",
   host: "localhost",
   database: "feedbackhub",
-  password: "undertaker",
+  password: "******",
   port: 5432,
 });
 db.connect();
@@ -45,6 +45,10 @@ app.get("/reviews", async (req, res) => {
 
 app.get("/feedback", (req, res) => {
   res.render("feedback.ejs");
+});
+
+app.get("/contact", (req, res) => {
+  res.render("contact.ejs");
 });
 
 // Post Methods
@@ -119,7 +123,7 @@ app.post("/feedback", async (req, res) => {
       "INSERT INTO whatsay (username , feedback) VALUES ($1 ,$2)",
       [name, review]
     );
-    res.render("feedback.ejs");
+    res.render("home.ejs");
   } catch (error) {
     console.log(error);
   }

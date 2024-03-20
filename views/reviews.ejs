@@ -1,11 +1,16 @@
 <%- include('partials/header.ejs') %>
 
 <section class="p-5">
-  <div class="container">
+  <div class="container gap-4 p-5 d-flex flex-wrap">
     <% review.forEach(rev => { %>
-    <h5 class="card-title"><%= rev.username %></h5>
-    <p class="card-text"><%= rev.feedback %></p>
-    <% }); %>
+    <div class="card" style="width: 18rem">
+      <div class="card-body">
+        <h5 class="card-title"><%= rev.username %></h5>
+        <p class="card-text"><%= rev.feedback %></p>
+      </div>
+    </div>
+    <% });%>
   </div>
 </section>
+
 <%- include('partials/footer.ejs') %>
